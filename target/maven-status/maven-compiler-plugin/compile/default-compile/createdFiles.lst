@@ -1,0 +1,13 @@
+pages\filter\MainFilterPage.class
+pages\delivery\DeliveryPage.class
+config\UserConfig.class
+pages\promo\MainPromoPage.class
+pages\delivery\MainDeliveryPage.class
+pages\auth\MainAuthPage.class
+pages\promo\CartPromoPage.class
+pages\subscribe\SubscribePage.class
+pages\promo\ItemPromoPage.class
+pages\filter\ItemFilterPage.class
+pages\delivery\ItemDeliveryPage.class
+pages\delivery\CartDeliveryPage.class
+pages\auth\SingInPage.class

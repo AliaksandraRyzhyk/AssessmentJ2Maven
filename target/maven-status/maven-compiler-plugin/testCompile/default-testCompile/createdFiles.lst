@@ -1,0 +1,14 @@
+steps\promo\CartPromoPageDef.class
+runner\RunnerTest.class
+steps\filter\ItemFilterPageDef.class
+steps\filter\MainFilterPageDef.class
+steps\promo\MainPromoPageDef.class
+steps\delivery\MainDeliveryPageDef.class
+steps\delivery\DeliveryPageDef.class
+steps\delivery\CartDeliveryPageDef.class
+steps\subscribe\SubscribePageDef.class
+steps\auth\MainAuthPageDef.class
+steps\promo\ItemPromoPageDef.class
+steps\auth\SingInPageDef.class
+steps\delivery\ItemDeliveryPageDef.class
+steps\Hooks.class
