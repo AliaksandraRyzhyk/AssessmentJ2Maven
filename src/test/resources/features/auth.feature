@@ -1,5 +1,5 @@
 # language: en
-@Auth
+@AuthToken
 Feature: Login New User
 
   Scenario: Successful login new user
