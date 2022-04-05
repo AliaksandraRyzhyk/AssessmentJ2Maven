@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                 withMaven (maven:'maven 3.8.1')
-                sh 'mvn clean compile'
+                bat 'mvn clean compile'
             }
         }
     }
@@ -16,7 +16,7 @@ pipeline {
 
                 steps {
                     withMaven (maven:'maven 3.8.1')
-                    sh 'mvn test'
+                    bat 'mvn test'
                 }
             }
         }
@@ -26,7 +26,7 @@ pipeline {
 
                  steps {
                       withMaven (maven:'maven 3.8.1')
-                        sh 'mvn deploy'
+                        bat 'mvn deploy'
                     }
                 }
             }
