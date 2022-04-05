@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class Hooks {
     @Before
-    public void openUrl() {
+    public void openUrl() throws InterruptedException {
         Thread.sleep(6000);
         open("https://fizcult.by/");
     }
