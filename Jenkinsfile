@@ -20,4 +20,12 @@ pipeline {
             }
         }
     }
+    post {
+        failure {
+            mail to: ryzhikai@rambler.ru, subject: 'The Pipeline failed :('
+        }
+        success {
+            mail to: aliaksandraryzhyk@gmail.com, subject: 'The Pipeline passed )))'
+        }
+    }
 }
