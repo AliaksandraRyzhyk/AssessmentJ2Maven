@@ -1,33 +1,23 @@
 pipeline {
     agent any
-
+    
     stages {
-        stage('Compile Stage') {
-
+        stage('git repo & clean') {
             steps {
-                withMaven (maven:'maven 3.8.1')
-                bat 'mvn clean compile'
+                bat "git clone https://github.com/AliaksandraRyzhyk/AssessmentJ2Maven.git"
+                bat "mvn clean"
+            }
+        }
+        
+        stage('test') {
+            steps {
+                bat "mvn test"
+            }
+        }
+        stage('package') {
+            steps {
+                bat "mvn package"
             }
         }
     }
-
-    stages {
-            stage('Testing Stage') {
-
-                steps {
-                    withMaven (maven:'maven 3.8.1')
-                    bat 'mvn test'
-                }
-            }
-        }
-
-    stages {
-            stage('Deployment Stage') {
-
-                 steps {
-                      withMaven (maven:'maven 3.8.1')
-                        bat 'mvn deploy'
-                    }
-                }
-            }
 }
