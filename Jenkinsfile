@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('git repo & clean') {
             steps {
-                //bat "git clone https://github.com/AliaksandraRyzhyk/AssessmentJ2Maven.git"
+                bat "git clone https://github.com/AliaksandraRyzhyk/AssessmentJ2Maven.git"
                 bat "mvn clean"
             }
         }
