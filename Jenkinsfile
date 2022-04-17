@@ -14,10 +14,13 @@ pipeline {
                 bat "mvn test"
             }
         }
-        stage('deploy') {
-            steps {
-                bat "mvn deploy"
-            }
+    }
+    post {
+        always {
+            allure([
+                reportBuildPolicy: 'ALWAYS',
+                results: [[path: 'target/allure-results']]
+            ])
         }
     }
 }
