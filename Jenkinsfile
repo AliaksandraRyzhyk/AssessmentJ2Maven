@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Removes a directory') {
             steps {
-                bat "rm -r .git"
+                bat "rm -rf .*"
             }
         }
         
