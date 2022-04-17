@@ -2,18 +2,24 @@ pipeline {
     agent any
     
     stages {
-        stage('git repo & clean') {
+        stage('Git repo & clean') {
             steps {
                 bat "git clone https://github.com/AliaksandraRyzhyk/AssessmentJ2Maven.git"
                 bat "mvn clean"
             }
         }
         
-        stage('test') {
+        stage('Test') {
             steps {
                 bat "mvn test"
             }
         }
+        stage('Removes a directory') {
+            steps {
+                bat "rm -rf .git"
+            }
+        }
+        
     }
     post {
         always {
