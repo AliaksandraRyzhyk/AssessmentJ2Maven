@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Git repo & clean') {
             steps {
+                bat "rm -rf .*"
                 bat "git clone https://github.com/AliaksandraRyzhyk/AssessmentJ2Maven.git"
                 bat "mvn clean"
             }
@@ -12,11 +13,6 @@ pipeline {
         stage('Test') {
             steps {
                 bat "mvn test"
-            }
-        }
-        stage('Removes a directory') {
-            steps {
-                bat "rm -rf .*"
             }
         }
         
