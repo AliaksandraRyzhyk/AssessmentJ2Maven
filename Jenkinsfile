@@ -22,9 +22,6 @@ pipeline {
                 results: [[path: 'target/allure-results']]
             ])
         }
-        failure {
-            mail to: ryzhikai@rambler.ru, subject: 'The Pipeline failed :('
-        }
         cleanup {
           cleanWs()
       }
