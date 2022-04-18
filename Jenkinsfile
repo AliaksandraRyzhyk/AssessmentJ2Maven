@@ -13,12 +13,7 @@ pipeline {
             steps {
                 bat "mvn test"
             }
-        } 
-        stage('Email') {
-            steps {
-                mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: 'failed', to: 'aliaksandraryzhyk@gmail.com'
-            }
-        } 
+        }
         
     }
     post {
