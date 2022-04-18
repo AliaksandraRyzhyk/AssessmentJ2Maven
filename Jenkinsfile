@@ -21,9 +21,8 @@ pipeline {
                 reportBuildPolicy: 'ALWAYS',
                 results: [[path: 'target/allure-results']]
             ])
+            cleanWs()
         }
-        cleanup {
-          cleanWs()
-      }
+     
     }
 }
