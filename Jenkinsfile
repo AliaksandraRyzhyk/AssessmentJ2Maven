@@ -24,7 +24,7 @@ pipeline {
             cleanWs()
         }
         failure {
-            mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: 'The Pipeline failed :(', to: 'aliaksandraryzhyk@gmail.com'
+            mail subject: 'The Pipeline failed :(', to: 'aliaksandraryzhyk@gmail.com'
         }
     }
 }
