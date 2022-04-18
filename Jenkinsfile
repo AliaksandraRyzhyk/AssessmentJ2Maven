@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Git repo & clean') {
             steps {
-                bat "rm -rf .git"
                 bat "git clone https://github.com/AliaksandraRyzhyk/AssessmentJ2Maven.git"
                 bat "mvn clean"
             }
@@ -14,8 +13,7 @@ pipeline {
             steps {
                 bat "mvn test"
             }
-        }
-        
+        } 
     }
     post {
         always {
@@ -24,5 +22,11 @@ pipeline {
                 results: [[path: 'target/allure-results']]
             ])
         }
+        failure {
+            mail to: ryzhikai@rambler.ru, subject: 'The Pipeline failed :('
+        }
+        cleanup {
+          cleanWs()
+      }
     }
 }
